@@ -1,7 +1,7 @@
-# [Balancing Molecular Information and Empirical Data in the Prediction of Physico-Chemical Properties](TBD)
+# [Balancing Molecular Information and Empirical Data in the Prediction of Physico-Chemical Properties](http://arxiv.org/abs/2406.08075)
 <div id="top"></div>
 
-  [![arxiv-link](https://img.shields.io/badge/Paper-PDF-red?style=flat&logo=arXiv&logoColor=red)](TODO)
+  [![arxiv-link](https://img.shields.io/badge/Paper-PDF-red?style=flat&logo=arXiv&logoColor=red)](http://arxiv.org/abs/2406.08075)
   [![made-with-pytorch](https://img.shields.io/badge/Made%20with-PyTorch-brightgreen)](https://pytorch.org/)
 [![made-with-pytorch](https://img.shields.io/badge/Made%20with-PyTorch%A0Geometric-brightgreen)](https://pytorch.org/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@
 
 
 ## About The Project
-This is the official GitHub repository for our work [Balancing Molecular Information and Empirical Data in the Prediction of Physico-Chemical Properties](TBD) where TBD.
+This is the official GitHub repository for our work [Balancing Molecular Information and Empirical Data in the Prediction of Physico-Chemical Properties](http://arxiv.org/abs/2406.08075) where we propose a hybrid method for combining molecular descriptors with representation learning for the (exemplary) task of predicting activity coefficients.
 
 > Predicting the physico-chemical properties of pure substances and mixtures is a central task in thermodynamics. Established prediction methods range from fully physics-based ab-initio calculations, which are only feasible for very simple systems, over descriptor-based methods that use some information on the molecules to be modeled together with fitted model parameters (e.g., quantitative-structure-property relationship methods or classical group contribution methods), to representation-learning methods, which may, in extreme cases, completely ignore molecular descriptors and extrapolate only from existing data on the property to be modeled (e.g., matrix completion methods). In this work, we propose a general method for combining molecular descriptors with representation learning using the so-called expectation maximization algorithm from the probabilistic machine learning literature, which uses uncertainty estimates to trade off between the two approaches. The proposed hybrid model exploits chemical structure information using graph neural networks, but it automatically detects cases where structure-based predictions are unreliable, in which case it corrects them by representation-learning based predictions that can better specialize to unusual cases. The effectiveness of the proposed method is demonstrated using the prediction of activity coefficients in binary mixtures as an example. The results are compelling, as the method significantly improves predictive accuracy over the current state of the art, showcasing its potential to advance the prediction of physico-chemical properties in general.
 > 
@@ -69,7 +69,12 @@ Distributed under the MIT License. See `LICENSE.MIT` for more information.
 Following is the Bibtex if you would like to cite our paper :
 
 ```bibtex
-TBD
+@article{zenn2024balancing,
+  title={Balancing Molecular Information and Empirical Data in the Prediction of Physico-Chemical Properties}, 
+  author={Johannes Zenn and Dominik Gond and Fabian Jirasek and Robert Bamler},
+  journal={arXiv preprint arXiv:2406.08075},
+  year={2024}
+}
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
