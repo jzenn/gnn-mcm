@@ -2,14 +2,16 @@
 <div id="top"></div>
 
   [![arxiv-link](https://img.shields.io/badge/Paper-PDF-red?style=flat&logo=arXiv&logoColor=red)](http://arxiv.org/abs/2406.08075)
+  [![DOI](https://zenodo.org/badge/814016378.svg)](https://zenodo.org/doi/10.5281/zenodo.11631565)
   [![made-with-pytorch](https://img.shields.io/badge/Made%20with-PyTorch-brightgreen)](https://pytorch.org/)
-[![made-with-pytorch](https://img.shields.io/badge/Made%20with-PyTorch%A0Geometric-brightgreen)](https://pytorch.org/)
+  [![made-with-pytorch](https://img.shields.io/badge/Made%20with-PyTorch%A0Geometric-brightgreen)](https://pytorch.org/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   <a href="https://jzenn.github.io" target="_blank">Johannes&nbsp;Zenn</a> &emsp; <b>&middot;</b> &emsp;
   <a href="https://mv.rptu.de/fgs/ltd/lehrstuhl/mitarbeiter/dominik-gond" target="_blank">Dominik&nbsp;Gond</a> &emsp; <b>&middot;</b> &emsp;
   <a href="https://mv.rptu.de/en/dpts/ltd/chair/staff/fabian-jirasek" target="_blank">Fabian&nbsp;Jirasek</a> &emsp; <b>&middot;</b> &emsp;
   <a href="https://robamler.github.io" target="_blank">Robert&nbsp;Bamler</a>
+
 
 
 ## About The Project
