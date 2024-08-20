@@ -2,7 +2,7 @@
 <div id="top"></div>
 
   [![arxiv-link](https://img.shields.io/badge/Paper-PDF-red?style=flat&logo=arXiv&logoColor=red)](http://arxiv.org/abs/2406.08075)
-  [![DOI](https://zenodo.org/badge/814016378.svg)](https://zenodo.org/doi/10.5281/zenodo.11631565)
+  [![DOI](https://zenodo.org/badge/814016378.svg)](https://zenodo.org/doi/10.5281/zenodo.11631566)
   [![made-with-pytorch](https://img.shields.io/badge/Made%20with-PyTorch-brightgreen)](https://pytorch.org/)
   [![made-with-pytorch](https://img.shields.io/badge/Made%20with-PyTorch%A0Geometric-brightgreen)](https://pytorch.org/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
