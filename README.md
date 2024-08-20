@@ -21,10 +21,12 @@ This is the official GitHub repository for our work [Balancing Molecular Informa
 > 
 
 
-## Installation
+## Installation (Virtual Environment)
 
-We recommend using a virtual environment.
+We recommend using a virtual environment to avoid dealing with other packages installed in the system.
+First, clone the repository using `git clone git@github.com:jzenn/gnn-mcm.git` and navigate to the repository folder with `cd gnn-mcm`.
 Two choices for installing virtual environments are given below.
+
 
 
 ### Environment: `conda` (recommended)
@@ -32,7 +34,6 @@ Two choices for installing virtual environments are given below.
 - install [miniconda](https://docs.conda.io/en/latest/miniconda.html)
 - create a new environment `conda create python=3.9 --name gnn-mcm`
 - activate the environment `conda activate gnn-mcm`
-- install the dependencies `pip install -r requirements.txt`
 
 
 ### Environment: `venv`
@@ -41,7 +42,11 @@ Please make sure that Python 3.9 is used for the installation, otherwise one mig
 
 - create a new environment `python3.9 -m venv gnn-mcm`
 - activate the environment `source gnn-mcm/bin/activate`
-- install the dependencies `pip install -r requirements.txt`
+
+
+## Installation (Requirenents and Packages)
+
+The dependencies and packages can be installed using the provided `requirements.txt` file using `pip install -r requirements.txt`.
 
 
 ## Preparing the Data
