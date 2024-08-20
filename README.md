@@ -20,11 +20,28 @@ This is the official GitHub repository for our work [Balancing Molecular Informa
 > Predicting the physico-chemical properties of pure substances and mixtures is a central task in thermodynamics. Established prediction methods range from fully physics-based ab-initio calculations, which are only feasible for very simple systems, over descriptor-based methods that use some information on the molecules to be modeled together with fitted model parameters (e.g., quantitative-structure-property relationship methods or classical group contribution methods), to representation-learning methods, which may, in extreme cases, completely ignore molecular descriptors and extrapolate only from existing data on the property to be modeled (e.g., matrix completion methods). In this work, we propose a general method for combining molecular descriptors with representation learning using the so-called expectation maximization algorithm from the probabilistic machine learning literature, which uses uncertainty estimates to trade off between the two approaches. The proposed hybrid model exploits chemical structure information using graph neural networks, but it automatically detects cases where structure-based predictions are unreliable, in which case it corrects them by representation-learning based predictions that can better specialize to unusual cases. The effectiveness of the proposed method is demonstrated using the prediction of activity coefficients in binary mixtures as an example. The results are compelling, as the method significantly improves predictive accuracy over the current state of the art, showcasing its potential to advance the prediction of physico-chemical properties in general.
 > 
 
-## Environment: 
 
-- tested with Python 3.9 (other versions might work as well);
-- dependencies can be found in `requirements.txt`
-- `wandb` is not necessarily required (provide `--wandb` to `main.py` to enable it)
+## Installation
+
+We recommend using a virtual environment.
+Two choices for installing virtual environments are given below.
+
+
+### Environment: `conda` (recommended)
+ 
+- install [miniconda](https://docs.conda.io/en/latest/miniconda.html)
+- create a new environment `conda create python=3.9 --name gnn-mcm`
+- activate the environment `conda activate gnn-mcm`
+- install the dependencies `pip install -r requirements.txt`
+
+
+### Environment: `venv`
+
+Please make sure that Python 3.9 is used for the installation, otherwise one might run into version conflicts with `torch`.
+
+- create a new environment `python3.9 -m venv gnn-mcm`
+- activate the environment `source gnn-mcm/bin/activate`
+- install the dependencies `pip install -r requirements.txt`
 
 
 ## Preparing the Data
