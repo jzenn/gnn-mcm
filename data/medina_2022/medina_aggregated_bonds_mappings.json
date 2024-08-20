@@ -1,0 +1,31 @@
+{
+    "bond_dir": {
+        "3": 0,
+        "4": 1,
+        "5": 2
+    },
+    "bond_type": {
+        "0": 0,
+        "17": 1,
+        "14": 2,
+        "6": 3
+    },
+    "bond_is_aromatic": {
+        "false": 0,
+        "true": 1
+    },
+    "bond_is_conjugated": {
+        "false": 0,
+        "true": 1
+    },
+    "bond_stereo": {
+        "3": 0,
+        "5": 1
+    },
+    "bond_valence_contrib": {
+        "1.0": 0,
+        "2.0": 1,
+        "3.0": 2,
+        "1.5": 3
+    }
+}
