@@ -60,9 +60,9 @@ torch-spline-conv==1.2.1 -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
 
 The script `train_medina_example.sh` provides an executable script for training the
 GNN-MCM on the dataset used by Medina et al. (2022).
-You can use this script to test whether the installed libraries work, but the
-resulting trained model will not be useful because real training requires a lot
-more training epochs. 
+You can use this script (run `./train_medina_example.sh`) to test whether the 
+installed libraries work, but the resulting trained model will not be useful because
+real training requires a lot more training epochs. 
 
 
 ## Preparing the Data
