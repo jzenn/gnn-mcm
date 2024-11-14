@@ -93,12 +93,18 @@ Additionally, we provide the `JSON` file that contains data and embeddings for t
 
 
 ## Running the Code
-
-Example training command for DAIS baseline:
+ 
+The code is run by the following scheme.
 ```bash
 python main.py <arguments for training>
 ```
 `<arguments for training>` can be replaced by the content of one of the files found in the `hyperparameters` folder.
+
+The script `train_medina_example.sh` provides an executable script for training the
+GNN-MCM on the dataset used by Medina et al. (2022).
+You can use this script (run `./train_medina_example.sh`) to test whether the 
+installed libraries work, but the resulting trained model will not be useful because
+real training requires a lot more training epochs.
 
 
 ## License
