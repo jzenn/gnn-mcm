@@ -3,6 +3,8 @@
 --experiment_name
 <insert-name>
 
+--data_path
+<insert-path>
 --number_of_solutes
 156
 --number_of_solvents
@@ -34,7 +36,7 @@ Diagonal-Gaussian-PMF-VI
 --batch_size
 1000
 --number_epochs
-10
+15000
 --use_seed
 --seed
 1

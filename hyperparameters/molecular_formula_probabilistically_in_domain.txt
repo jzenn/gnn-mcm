@@ -38,7 +38,7 @@ sum-formula
 --batch_size
 -1
 --number_epochs
-10
+15000
 --lr
 0.0005
 --use_seed

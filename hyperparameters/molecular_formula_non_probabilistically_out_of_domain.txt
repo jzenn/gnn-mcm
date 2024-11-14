@@ -34,7 +34,7 @@ No-Prior-MF
 --batch_size
 -1
 --number_epochs
-10
+15000
 --use_seed
 --seed
 1
