@@ -47,6 +47,7 @@ Please make sure that Python 3.9 is used for the installation, otherwise one mig
 ## Installation (Requirenents and Packages)
 
 The dependencies and packages can be installed using the provided `requirements.txt` file using `pip install -r requirements.txt`.
+The code is tested using `pip==24.3.1` (`pip install --upgrade pip==24.3.1`).
 
 
 ## Preparing the Data
