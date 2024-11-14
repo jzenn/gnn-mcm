@@ -46,8 +46,23 @@ Please make sure that Python 3.9 is used for the installation, otherwise one mig
 
 ## Installation (Requirements and Packages)
 
-The dependencies and packages can be installed using the provided `requirements.txt` file using `pip install -r requirements.txt`.
-The code is tested using `pip==24.3.1` (`pip install --upgrade pip==24.3.1`).
+First, make sure that `pip==24.3.1` is installed (`pip install --upgrade pip==24.3.1`).
+Then, install the `requirements.txt` via `pip install -r requirements.txt`.
+Then, run the following.
+```
+# replace torch-1.10.0+cpu by torch-1.10.0+{cu102,cu113,cu111}
+# depending on availability of accelerator
+torch-cluster==1.6.0 -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
+torch-scatter==2.0.9 -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
+torch-sparse==0.6.13 -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
+torch-spline-conv==1.2.1 -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
+```
+
+The script `train_medina_example.sh` provides an executable script for training the
+GNN-MCM on the dataset used by Medina et al. (2022).
+You can use this script to test whether the installed libraries work, but the
+resulting trained model will not be useful because real training requires a lot
+more training epochs. 
 
 
 ## Preparing the Data
@@ -83,7 +98,7 @@ Example training command for DAIS baseline:
 ```bash
 python main.py <arguments for training>
 ```
-`<arguments for training>` can be replaced by the files found in the `hyperparameters` folder.
+`<arguments for training>` can be replaced by the content of one of the files found in the `hyperparameters` folder.
 
 
 ## License
