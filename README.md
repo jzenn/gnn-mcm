@@ -111,8 +111,7 @@ real training requires a lot more training epochs.
 Distributed under the MIT License. See `LICENSE.MIT` for more information.
 
 
-## Citation:
-Following is the Bibtex if you would like to cite our paper :
+## Citation
 
 ```bibtex
 @article{zenn2024balancing,
