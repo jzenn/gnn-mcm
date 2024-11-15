@@ -7,9 +7,6 @@ __pycache__
 ## WandB
 wandb
 
-## experiments
-experiments
-
 ## macos
 .DS_Store
 ._DS_Store
