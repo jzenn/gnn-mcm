@@ -4,7 +4,7 @@
   [![arxiv-link](https://img.shields.io/badge/Paper-PDF-red?style=flat&logo=arXiv&logoColor=red)](http://arxiv.org/abs/2406.08075)
   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14165337.svg)](https://doi.org/10.5281/zenodo.14165337)
   [![made-with-pytorch](https://img.shields.io/badge/Made%20with-PyTorch-brightgreen)](https://pytorch.org/)
-  [![made-with-geometric](https://img.shields.io/badge/Made%20with-PyTorch%A0Geometric-brightgreen)](https://pytorch-geometric.readthedocs.io/en/latest/)
+  [![made-with-pytorch](https://img.shields.io/badge/Made%20with-PyTorch%A0Geometric-brightgreen)](https://pytorch.org/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   <a href="https://jzenn.github.io" target="_blank">Johannes&nbsp;Zenn</a> &emsp; <b>&middot;</b> &emsp;
@@ -44,13 +44,13 @@ representation learning for the (exemplary) task of predicting activity coeffici
 > physico-chemical properties in general.
 
 
-## Installation (Virtual Environment)
+## Step 1 of 4: Installation (Virtual Environment)
 
 We recommend using a virtual environment to avoid dealing with other packages 
 installed in the system.
 First, clone the repository using `git clone git@github.com:jzenn/gnn-mcm.git` 
 and navigate to the repository folder with `cd gnn-mcm`.
-You can install a virtual environment via two methods given below.
+You can install a virtual environment via either of the two methods given below.
 
 
 ### Environment: `conda` (recommended)
@@ -65,15 +65,17 @@ You can install a virtual environment via two methods given below.
 Please make sure that Python 3.9 is used for the installation, otherwise one might 
 run into version conflicts with `torch`.
 
-- create a new environment `python3.9 -m venv gnn-mcm`
-- activate the environment `source gnn-mcm/bin/activate`
+- create a new environment `python3.9 -m venv venv`
+- activate the environment `source venv/bin/activate`
 
 
-## Installation (Requirements and Packages)
+## Step 2 of 4: Installation (Requirements and Packages)
 
-First, make sure that `pip==24.3.1` is installed 
-(`pip install --upgrade pip==24.3.1`).
-Then, install the `requirements.txt` via `pip install -r requirements.txt`.
+First, make sure that `pip==24.3.1` is installed (`pip install --upgrade pip==24.3.1`).
+Then, install the `requirements.txt` via
+```bash
+pip install -r requirements.txt
+```
 After all requirements have been installed, run the following.
 ```bash
 # replace torch-1.10.0+cpu by torch-1.10.0+{cu102,cu113,cu111}
@@ -85,25 +87,27 @@ pip install torch-spline-conv==1.2.1 -f https://data.pyg.org/whl/torch-1.10.0+cp
 ```
 
 
-## Preparing the Data
+## Step 3 of 4: Preparing the Data
 
 We provide a detailed description of the data preparation process in the following.
 
 
 ### Data Used in Medina et al. (2022)
 
-We provide the processed `CSV` file for the data used in Medina et al. (2022) 
-(taken from their repository) at `data/medina_2022/medina_data.csv`.
+We provide the processed `CSV` file for the data used in [Medina et al. (2022)](
+https://pubs.rsc.org/en/content/articlehtml/2022/dd/d1dd00037c) (taken from [their 
+repository](https://github.com/edgarsmdn/GNN_IAC)) at 
+`data/medina_2022/medina_data.csv`.
 Additionally, we provide the `JSON` file that contains the embeddings for the 
 molecules.
 
 
-### Dortmund Data Bank 2019
+### Dortmund Data Bank 2019 (optional)
 
 The Dortmund Data Bank 2019 (DDB) is not publicly available but can be downloaded 
 with a paid subscription.
 If you want to train on the DDB dataset, the data should be processed as described in 
-Jirasek et al. (2020). 
+[Jirasek et al. (2020)](https://pubs.acs.org/doi/full/10.1021/acs.jpclett.9b03657?casa_token=rjHtKSC14XwAAAAA%3A6bjf1zVHTfwKy9_pfLSx6kigu-hl3-5rMHTlqelM-9QBw5Dn_ZIuyN-G0vt_Q5daYuRYt42Tx5T0P7z-). 
 The provided `CSV` file should contain the following columns:
 - `log_gamma_exp`: log of the experimental activity coefficient
 - `solute_idx`: index of the solute
@@ -118,23 +122,39 @@ The `JSON` file has the same structure as for the data of Medina et al. (2022)
 `data/medina_2022/featurized_molecules.json`).
 
 
-## Running the Code (Exemplary Script)
+## Step 4 of 4: Running the Code (Exemplary Script)
 
 The script `train_medina_example.sh` provides an executable script for training the
 GNN-MCM on the dataset used by Medina et al. (2022).
-You can use this script (run `./train_medina_example.sh`) to test whether the 
+You can use this script by running
+```bash
+./train_medina_example.sh
+```
+to test whether the
 installed libraries work, but the resulting trained model will not be useful because
 real training requires a lot more training epochs.
+If this script runs for a few minutes and then prints test results (including test 
+MSE and MAE) to the terminal, then your installation works.
 
-In general, the code is run by the following scheme.
+To replicate the results in our paper, run a command of the following form,
 ```bash
 python main.py <arguments for training>
 ```
-`<arguments for training>` can be replaced by the content of one of the files found 
-in the `hyperparameters` folder.
-
-
-
+where the exact `<arguments for training>` that we used in our experiments are listed
+in the files in the directory `hyperparameters`.
+When taking these arguments, make sure that you
+- replace each `<insert-path>` by a suitable path (cf. example in file 
+`train_medina_example.sh`);
+- replace `<insert-name>` with an identifier of your choice (the training script will 
+create a subdirectory with this name in the directory specified by
+`--experiment_base_path`, where it will store checkpoints and results);
+- replace `<ensemble-id>` with a number from 1 to 10 to specify the current 
+train/test split for 10-fold cross validation;
+- replace `<M>` and `<N>` by the number of solutes and solvents that the dataset 
+contains;
+- replace `<M'>` and `<N'>` (if present) by the number of solutes and solvents that 
+should be excluded from the training set for zero-shot prediction;
+- concatenate all arguments into a single space-separated line.
 
 
 ## License
